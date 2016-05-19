@@ -25,6 +25,7 @@ public class IntToEngTest {
 		String expected = "twentyone";
 		String actual = number.translateEng(21);
 		assertThat(actual,is(expected));
+		System.out.println(number.translateEng(21));
 	}
 	public void test() {
 		fail("Not yet implemented");

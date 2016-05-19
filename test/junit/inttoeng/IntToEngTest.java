@@ -8,10 +8,10 @@ import org.junit.Test;
 public class IntToEngTest {
 
 	@Test
-	public void translateで1をoneに変更できるメソッド() {
-		IntToEng number = new IntToEng();
+	public void translateで１をoneに変更するメソッド() {
+		IntToEng num = new IntToEng();
 		String expected = "one";
-		String actual = number.translateEng(1);
+		String actual = num.translateEng(1);
 		assertThat(actual,is(expected));
 	}
 	public void translateで30をthirtyに変更できるメソッド() {
@@ -25,7 +25,12 @@ public class IntToEngTest {
 		String expected = "twentyone";
 		String actual = number.translateEng(21);
 		assertThat(actual,is(expected));
-		System.out.println(number.translateEng(21));
+	}
+	public void translateで100をonehundretに変更できるメソッド() {
+		IntToEng number = new IntToEng();
+		String expected = "onehundret";
+		String actual = number.translateEng(100);
+		assertThat(actual,is(expected));
 	}
 	public void test() {
 		fail("Not yet implemented");

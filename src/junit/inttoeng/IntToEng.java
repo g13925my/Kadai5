@@ -31,15 +31,21 @@ public class IntToEng {
     		if (n < 20) {
     	    number = eNum1[n];
     		} 
-    		if(n <= 99  && n % 10 == 0) {
+    		else if(n <= 99  && n % 10 == 0) {
     		number = eNum2[n/10-2];
-    		if(n%10 !=0){
+    		}else if(n%10 !=0){
     			String no2=eNum2[n/10-2];
-    			String no1=eNum1[n%10];    			
-    			no2= sb.Append(no1);	
+    			String no1=eNum1[n%10];  
+    			sb.append(no2);
+    			sb.append(no1);
+    			String a=sb.toString();
+    			number = a;
     		}
+    		else if(n==100){
+    		 number = "onehundret";
+    		}	
+    			/*number = new StringBuffer(eNum2[input.charAt(0) - 50]);
     		}
-    		/*number = new StringBuffer(eNum2[input.charAt(0) - 50]);
     		if (input.charAt(1) != '0') {
     		number.append("-").append(eNum1[input.charAt(1) - 48]);
     		}

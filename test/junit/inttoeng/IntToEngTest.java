@@ -20,6 +20,12 @@ public class IntToEngTest {
 		String actual = number.translateEng(30);
 		assertThat(actual,is(expected));
 	}
+	public void translateで21をtwentyoneに変更できるメソッド() {
+		IntToEng number = new IntToEng();
+		String expected = "twentyone";
+		String actual = number.translateEng(21);
+		assertThat(actual,is(expected));
+	}
 	public void test() {
 		fail("Not yet implemented");
 	}

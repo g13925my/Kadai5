@@ -29,8 +29,11 @@ public class IntToEng {
     		}
     		if (n < 20) {
     	    number = eNum1[n];
-    		} else if(n >= 20 && n % 10 == 0) {
+    		} else if(n <= 99 && n >= 20 && n % 10 == 0) {
     		number = eNum2[n/10-2];
+    		if(n%10 !=0){
+    			number= eNum2[n/10-2]+eNum1[n%10-1];	
+    		}
     		}
     		/*number = new StringBuffer(eNum2[input.charAt(0) - 50]);
     		if (input.charAt(1) != '0') {
